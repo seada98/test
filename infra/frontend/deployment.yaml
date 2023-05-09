@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - image: rodolfoksveiga/django-react_react:latest
+        - image: seada98/frontend:v1
           name: react
           env:
             - name: REACT_APP_API_URL
