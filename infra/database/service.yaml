@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: database-service
 spec:
-  type: LoadBlancer
+  type: LoadBalancer
   ports:
     - name: 5432-5432
       port: 5432
