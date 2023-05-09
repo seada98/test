@@ -15,7 +15,7 @@ spec:
         app: database
     spec:
       containers:
-        - image: postgres:14.1-alpine
+        - image: postgres:15.2-alpine
           name: database
           ports:
             - containerPort: 5432
