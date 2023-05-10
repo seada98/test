@@ -120,11 +120,6 @@ spec:
           volumeMounts:
             - name: db-storage
               mountPath: /var/lib/postgresql/data
-      volumes:
-        - name: db-storage
-          persistentVolumeClaim:
-            claimName: db-pvc
-
 ---
 
 # Define the Deployment for the Django application
@@ -154,10 +149,6 @@ spec:
           volumeMounts:
             - name: api-storage
               mountPath: /api
-      volumes:
-        - name: api-storage
-          persistentVolumeClaim:
-            claimName: api-pvc
 ---
 
 # Define the Deployment for the React application
@@ -184,10 +175,6 @@ spec:
           volumeMounts:
             - name: app-storage
               mountPath: /app
-      volumes:
-        - name: app-storage
-          persistentVolumeClaim:
-            claimName: app-pvc
 
 ---
 
