@@ -34,6 +34,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
+  storageClassName: standard-rwo
   selector:
     matchLabels:
       name: db
@@ -50,6 +51,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
+  storageClassName: standard-rwo
   selector:
     matchLabels:
       name: api
@@ -66,26 +68,12 @@ spec:
   resources:
     requests:
       storage: 1Gi
+  storageClassName: standard-rwo
   selector:
     matchLabels:
       name: app
 ---
-# Define the Persistent Volume Claim for the React application
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: app-pvc
-  namespace: my-app
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
-  selector:
-    matchLabels:
-      name: app
----
+
 
 # Define the ConfigMap for the Django application
 apiVersion: v1
