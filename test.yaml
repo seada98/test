@@ -121,8 +121,8 @@ spec:
               mountPath: /api
       volumes:
         - name: api-storage
-          emptyDir: {}
-
+          persistentVolumeClaim:
+            claimName: api-pvc
 ---
 
 # Define the Deployment for the React application
@@ -152,7 +152,7 @@ spec:
       volumes:
         - name: app-storage
           persistentVolumeClaim:
-          claimName: app-pvc
+            claimName: app-pvc
 
 ---
 
