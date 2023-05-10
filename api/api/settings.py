@@ -87,13 +87,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'admin',
-        'PASSWORD': 'password',
-        'HOST': 'database-service',
-        'PORT': 5432,
+    "default": {
+        "ENGINE": environ.get("PSQL_ENGINE"),
+        "NAME": environ.get("PSQL_NAME"),
+        "USER": environ.get("PSQL_USER"),
+        "PASSWORD": environ.get("PSQL_PASSWORD"),
+        "HOST": environ.get("PSQL_HOST"),
+        "PORT": environ.get("PSQL_PORT"),
     }
 }
 # DATABASES = {
