@@ -4,7 +4,7 @@ metadata:
   name: backend-ingress
 spec:
   rules:
-    - host: api.mayflower.com.eg
+    - host: seada.ddns.net
       http:
         paths:
           - path: /
