@@ -60,7 +60,9 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: standard
   hostPath:
-    path: /data
+    path: /tmp/data
+    type: DirectoryOrCreate
+
 ---
 apiVersion: v1
 kind: Service
